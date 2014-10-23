@@ -1,0 +1,11 @@
+<h3>User</h3>
+<p>Email: <%= @user.email if @user.email %></p>
+
+<% if @authorization %>
+<% @authorization.each do |auth| %>
+
+<p>Auth: <%= auth.provider + ' - ' + auth.uid %></p>
+<p>Token: <%= auth.token %></p>
+
+<% end %>
+<% end %>
